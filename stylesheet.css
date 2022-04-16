@@ -1,0 +1,322 @@
+
+/*********************************************************SQL injection exercise********************************************************/
+
+
+#sql_ex
+{
+  margin-top: 5%;
+  margin-left: 10%;
+  display: block;
+  font-size: 120%;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(192,192,192);
+  width: 560;
+  height: auto;
+  border-radius: 25px;
+}
+
+#name_input
+{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 3%;
+  width:44%;
+
+}
+
+#surname_input
+{
+  margin-left: 1%;
+  width: 50%;
+}
+
+.accountText
+{
+
+  margin-left: 6%
+
+}
+
+.errorMessage
+{
+  text-align: center;
+  font-size: 95%;
+  color: red;
+  padding-bottom: 1%;
+  padding-top: 0%;
+}
+
+
+#submit
+{
+  position: relative;
+  left: 70%;
+  top: auto
+  bottom: 10%;
+}
+
+
+
+
+
+/**************************************************Dark/light mode button*****************************************************************/
+
+/* The switch - the box around the slider */
+.switch 
+{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input
+{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider 
+{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.slider:before 
+{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*Button when checked*/
+input:checked + .slider 
+{
+  background-color: #F0FFFF;
+}
+
+input:.slider
+{
+  background-color: blue;
+}
+
+
+input:focus + .slider 
+{
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before 
+{
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round 
+{
+  border-radius: 34px;
+}
+
+.slider.round:before 
+{
+  border-radius: 50%;
+}
+
+
+
+/* The dark slider */
+.darkSlider 
+{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.darkSlider:before 
+{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #000000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*Button when checked*/
+input:checked + .darkSlider 
+{
+  background-color: #FFFF;
+}
+
+input:.darkSlider
+{
+  background-color: blue;
+}
+
+
+input:focus + .darkSlider 
+{
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .darkSlider:before 
+{
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.darkSlider.round 
+{
+  border-radius: 34px;
+}
+
+.darkSlider.round:before 
+{
+  border-radius: 50%;
+}
+
+/***************************************************************************************************************************************************/
+
+
+
+
+
+
+--------/*Intro page*/----------
+
+
+*{
+
+  background-image: linear-gradient(direction, lightgrey, white);
+  font-family: arial;
+
+}
+
+
+  /* Header */
+.inline_blocks
+{
+  display: flex;
+}
+
+#stripes_block
+{
+  width:40%;
+  display:inline-block;
+}
+
+
+#stripes 
+{
+  float: left;
+  text-align: left;
+  width:50%;
+  height: auto;
+}
+
+
+
+#ecam_logo
+{
+  display:inline-block;
+  float:right;
+  text-align: right;
+  width: auto;
+}
+
+#logo_student 
+{
+  top: 2%;
+  margin-right: 2%;
+  width: 50%;
+  height: auto;
+}
+
+ 
+#logo 
+{
+  float: left;
+  padding-left: 40%;
+  margin-top: 2%;
+  width:70%;
+  height: auto;
+}
+    
+
+
+#intro
+{
+  font-size: 180%;
+  flex:1;
+  color: blue;
+  padding-top: 0%;
+  padding-right: 8%;
+  padding-left: 4%;
+}
+
+
+/* Button */
+
+  #discover 
+  {
+    display: inline-block;
+    background-color: blue;
+    border-radius: 5px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 150px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+  }
+      
+
+  #Discover 
+  {
+    margin-top: 8%;
+    margin-left: 60%;
+    text-align: center;  
+  }
+
+--------/*Main page*/----------
+
