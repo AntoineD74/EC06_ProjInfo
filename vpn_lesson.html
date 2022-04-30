@@ -1,0 +1,137 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title> CyberSecuritySchool </title>
+</head>
+
+<header>
+  <div id="titre">
+      <div class="titre">
+ 
+
+        <div class="t2">
+          <h4>Le VPN</h4>
+        </div>
+
+       
+       <img src="Image/logo_ecam.png" id="logo-student-main" alt="Logo ECAM">
+        
+  </div>
+
+
+    <div class="barre">
+        <div>
+          <li><a class="abc" href="https://example.com">Acceuil</a></li>
+         </div>
+         <div>
+         <li><a class="abc" href="https://example.com">VPN</a></li>
+           </div>
+           <div>
+            <li><a class="abc" href="https://example.com">page 3</a></li>
+            </div>
+            <div>
+             <li><a class="abc" href="https://example.com">page 4</a></li>
+              </div>
+    </div>
+</div>
+
+  </header>
+<body>
+
+<section id="introduction">
+    <h1  class="big_titles">  1)	Le principe </h1>
+<h3>Un réseau VPN repose sur un protocole appelé « protocole de tunneling ». Ce protocole permet de faire circuler les informations de l’entreprise de façon cryptée d’un bout à l’autre du tunnel. Ainsi, les utilisateurs ont l’impression de se connecter directement sur le réseau de leur entreprise.</h3>
+
+    </section>
+
+<section id="first_part"> <! tunneling>
+    <h1  class="big_titles"> 2)	Le tunneling</h1>
+
+<h2>a)	Introduction : </h2>
+    <h3>Le principe de tunneling consiste à construire un chemin virtuel après avoir identifié l’émetteur et le destinataire. Par la suite, la source chiffre les données et les achemine en empruntant Ce chemin virtuel. Afin d’assurer un accès aisé et peu coûteux aux intranets ou aux extranets d’entreprise, les réseaux privés virtuels d’accès simulent un réseau privé, alors qu’ils utilisent en réalité une infrastructure d’accès partagée, comme Internet.</h3>
+    <h2>b)	Pour aller plus loin : (à voir si on garde)</h2>
+<h3>Un tunnel, dans le contexte des réseaux informatiques, est une encapsulation de données d'un protocole réseau dans un autre, situé dans la même couche du modèle en couches, ou dans une couche de niveau supérieur.(principes de couche
+D'abord, le paquet est enveloppé dans un en-tête supplémentaire, c'est ce qu'on appelle l'encapsulation. Cet en-tête supplémentaire contient les informations de routage nécessaires pour envoyer le paquet encapsulé à travers l'inter-réseau intermédiaire. Cette information est très importante car les données utiles sont envoyées dans un protocole différent de celui dans lequel les données ont été créées. Ensuite, un tunnel, qui est un chemin interconnectant 2 points, est créé et le paquet est transmis au point final. À ce moment, le paquet est désencapsulé pour "retrouver sa forme initiale".</h3>
+   <h2>c)	Principe des couches : (à voir si on garde aussi)</h2>
+<h3>Le principe des couches découle du modèle OSI.
+Le modèle OSI (de l'anglais Open Systems Interconnection) est une norme de communication, en réseau, de tous les systèmes informatiques. C'est un modèle de communications entre ordinateurs proposé par l'ISO (Organisation internationale de normalisation) qui décrit les fonctionnalités nécessaires à la communication et l'organisation de ces fonctions.
+Le modèle comporte sept couches succinctement présentées ci-dessus de bas en haut et détaillées dans leurs articles respectifs. Ces couches sont parfois réparties en deux groupes.
+Les trois couches inférieures sont plutôt orientées communication et sont souvent fournies par un système d'exploitation et par le matériel.
+Les quatre couches supérieures sont plutôt orientées application et plutôt réalisées par des bibliothèques ou un programme spécifique. Dans le monde IP, ces quatre couches sont rarement distinguées. Dans ce cas, toutes les fonctions de ces couches sont considérées comme faisant partie intégrante du protocole applicatif.
+Par ailleurs, les couches basses sont normalement transparentes pour les données à transporter, alors que les couches supérieures ne le sont pas nécessairement, notamment au niveau présentation.</h3>
+
+    </section>
+
+    <section id="second_part"><!types de VPN>
+      <h1 class="big_titles"> 3)	Les types de VPN </h1>
+
+
+      <div id="VPN1">
+
+    <div class="suu">
+      <h2>a)	VPN d’accès à distance</h2>
+      <h3>Le VPN d’accès est utilisé pour permettre à des utilisateurs itinérants d’accéder au réseau privé. L’utilisateur se sert d’une connexion Internet pour établir la connexion VPN. Il existe deux cas :
+      <p>•	L’utilisateur demande au fournisseur d’accès de lui établir une connexion cryptée vers le serveur distant : il communique avec le Nas (Network Access Server/Serveur d’accès réseau) du fournisseur d’accès et c’est le Nas qui établit la connexion cryptée.</p>
+      <p>•	L’utilisateur possède son propre logiciel client pour le VPN auquel cas il établit directement la communication de manière cryptée vers le réseau de l’entreprise.</p>
+      <p> Les deux méthodes possèdent chacune leurs avantages et leurs inconvénients :</p>
+      <p>•	La première permet à l’utilisateur de communiquer sur plusieurs réseaux en créant plusieurs tunnels, mais nécessite un fournisseur d’accès proposant un Nas compatible avec la solution VPN choisie par l’entreprise. De plus, la demande de connexion par le Nas n’est pas cryptée Ce qui peut poser des problèmes de sécurité.</p>
+      <p>•	Sur la deuxième méthode Ce problème disparaît puisque l’intégralité des informations sera cryptée dès l’établissement de la connexion. Cependant, cette solution nécessite que chaque client transporte avec lui le logiciel, lui permettant d’établir une communication cryptée.</p>
+        <p>  Quelle que soit la méthode de connexion choisie, Ce type d’utilisation montre bien l’importance dans le VPN d’avoir une authentification forte des utilisateurs. Cette authentification peut se faire par une vérification « login / mot de passe », par un algorithme dit « Tokens sécurisés » (utilisation de mots de passe aléatoires) ou par certificats numériques.</p>
+        </h3>
+
+    </div>
+    <div class="VPN2">
+      <img class="vpn2" src="1.png" alt="types de VPN"/>
+      </div>
+</div>
+
+<h2>b)	L’intranet VPN</h2>
+<h3 class="adb"> L’intranet VPN est utilisé pour relier au moins deux intranets entre eux. Ce type de réseau est particulièrement utile au sein d’une entreprise possédant plusieurs sites distants. Le plus important dans Ce type de réseau est de garantir la sécurité et l’intégrité des données. Certaines données très sensibles peuvent être amenées à transiter sur le VPN (base de données clients, informations financières…). Des techniques de cryptographie sont mises en œuvre pour vérifier que les données n’ont pas été altérées. Il s’agit d’une authentification au niveau paquet pour assurer la validité des données, de l’identification de leur source ainsi que leur non-répudiation. La plupart des algorithmes utilisés font appel à des signatures numériques qui sont ajoutées aux paquets. La confidentialité des données est, elle aussi, basée sur des algorithmes de cryptographie. La technologie en la matière est suffisamment avancée pour permettre une sécurité quasi parfaite. Le coût matériel des équipements de cryptage et décryptage ainsi que les limites légales interdisent l’utilisation d’un codage « infaillible » Généralement pour la confidentialité, le codage en lui-même pourra être moyen à faible, mais sera combiné avec d’autres techniques comme l’encapsulation Ip dans Ip pour assurer une sécurité raisonnable.</h3>
+
+
+    </section>
+
+    <section id="third_part"> <!caractéristiques d'un bon VPN>
+        <h1  class="big_titles">4)	Les caractéristiques d’un bon VPN</h1>
+<h3>Un système de VPN doit pouvoir mettre en œuvre les fonctionnalités suivantes :
+<p>•	Authentification d’utilisateur. Seuls les utilisateurs autorisés doivent pouvoir s’identifier sur le réseau virtuel. De plus, un historique des connexions et des actions effectuées sur le réseau doit être conservé.</p>
+<p>•	Gestion d’adresses. Chaque client sur le réseau doit avoir une adresse privée. Cette adresse privée doit rester confidentielle. Un nouveau client doit pouvoir se connecter facilement au réseau et recevoir une adresse.</p>
+<p>•	Cryptage des données. Lors de leurs transports sur le réseau public les données doivent être protégées par un cryptage efficace.</p>
+<p>•	Gestion de clés. Les clés de cryptage pour le client et le serveur doivent pouvoir être générées et régénérées.</p>
+<p>•	Prise en charge multiprotocole. La solution VPN doit supporter les protocoles les plus utilisés sur les réseaux publics en particulier Ip.</p>
+    Le VPN est un principe : il ne décrit pas l’implémentation effective de ces caractéristiques. C’est pourquoi il existe plusieurs produits différents sur le marché dont certains sont devenus standard, et même considérés comme des normes.</h3>
+
+    </section>
+
+    <section id=e><!protocoles d'un VPN>
+        <h1  class="big_titles">5)	Les protocoles d’un VPN</h1>
+ <h3>Nous pouvons classer les protocoles que nous allons étudier en deux catégories :
+<p>•	Les protocoles de niveau 2 comme PPTP et L2TP. (Dépendant du protocole PPP)</p>
+<p>•	Les protocoles de niveau 3 comme IPSec ou MPLS.</p>
+        </h3>
+    </section>
+
+    <section id=button>
+       <button onclick="window.location.href = 'VPN_exercises.html';">Installer un VPN</button>
+
+    </section>
+
+    <footer>
+      <div class="barre">
+          <div>
+            <li><a class="bac" href="https://example.com">About us</a></li>
+           </div>
+           <div>
+           <li><a class="bac" href="https://example.com">contact</a></li>
+             </div>
+             <div>
+              <li><a class="bac" href="https://example.com">Social Media</a></li>
+              </div>
+              <div>
+               <li><a class="abc" href="https://example.com">sources</a></li>
+                </div>
+      </div>
+
+    </footer>
+
+    </body>
