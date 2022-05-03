@@ -107,7 +107,7 @@
 		<div class = "inline_blocks">
 
 			<div>
-				<img src="Image/logo.png" id="logo" alt="image flottante"></p>
+				<img src="Image/Logo.png" id="logo" alt="image flottante"></p>
 			</div>
 
 			<div id="intro">
