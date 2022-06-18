@@ -1,0 +1,1452 @@
+
+/*********************************************************SQL injection exercise********************************************************/
+
+
+#sql_ex
+{
+  margin-top: 5%;
+  margin-bottom: 6%;
+  margin-left: 30%;
+  display: relative;
+  font-size: 120%;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(192,192,192);
+  width: 50%;
+  height: auto;
+  border-radius: 25px;
+}
+
+#name_input
+{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 3%;
+  width:44%;
+
+}
+
+#surname_input
+{
+  margin-left: 1%;
+  width: 50%;
+}
+
+.accountText
+{
+
+  margin-left: 6%
+
+}
+
+.errorMessage
+{
+  text-align: center;
+  font-size: 95%;
+  color: red;
+  padding-bottom: 1%;
+  padding-top: 0%;
+}
+
+
+#submit
+{
+  position: relative;
+  left: 70%;
+  top: auto
+  bottom: 10%;
+}
+
+
+#results_display
+{
+  width: 90%;
+  height: auto;
+  background-color: grey;
+  text-align: justify;
+  padding: 4%;
+  margin-left: 6%;
+  margin-top: 4%;
+  margin-bottom: 8%;
+}
+
+
+
+/**************************************************Dark/light mode button*****************************************************************/
+
+.dl_button
+{
+  position: absolute;
+  top:30%;
+  right:14%;
+}
+
+.dl_text
+{
+  position: absolute;
+  top:29%;
+  right: 19%;
+  color: black;
+}
+
+.dl_button_main_page
+{
+  position: absolute;
+  top:7%;
+  right:20%;
+}
+
+.dl_text_main_page
+{
+  position: absolute;
+  top:6%;
+  right: 25%;
+  color: white;
+}
+
+.switch
+{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input
+{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider
+{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00008B/*#000000*/;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.slider:before
+{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*Button when checked*/
+input:checked + .slider
+{
+  background-color: #F0FFFF;
+}
+
+input:.slider
+{
+  background-color: blue;
+}
+
+
+input:focus + .slider
+{
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before
+{
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round
+{
+  border-radius: 34px;
+}
+
+.slider.round:before
+{
+  border-radius: 50%;
+}
+
+
+
+/* The dark slider */
+.darkSlider
+{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.darkSlider:before
+{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #000000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*Button when checked*/
+input:checked + .darkSlider
+{
+  background-color: #FFFF;
+}
+
+input:.darkSlider
+{
+  background-color: blue;
+}
+
+
+input:focus + .darkSlider
+{
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .darkSlider:before
+{
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.darkSlider.round
+{
+  border-radius: 34px;
+}
+
+.darkSlider.round:before
+{
+  border-radius: 50%;
+}
+
+
+------------------------------------------------------------/*index page*/--------------------------------------------------------
+
+
+  /* --------------------------------------- header --------------------------------- */
+
+  .logo-student-main
+  {
+    text-align:right;
+    position: relative;
+    margin-top: 2%;
+    margin-right: 1%;
+    margin-width: 15%;
+  }
+
+  .logo_site
+  {
+    width: 14%;
+    height: auto;
+  }
+
+  .logo_student_main
+  { 
+    width:15%;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+
+  .name_site
+  {
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    font-size: 250%;
+    color: white;
+    font-family: "Noto Sans", Cantarell, sans-serif;
+  }
+  
+  /* --------------------------------- Menu nav---------------------------- */
+
+nav 
+{
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 4%;
+}
+
+nav > ul 
+{
+  display: flex;
+  text-align: center;
+  box-shadow: 0px 28px 2px 1px white;
+}
+
+nav ul 
+{
+  list-style-type: none;
+}
+
+nav > ul > li 
+{
+  background-color: lightgrey;
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+
+nav > ul > li > a 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+}
+
+li a 
+{
+  text-decoration: none;
+  color: black;
+}
+
+nav > ul > li:hover > a
+{
+  color: #2169EC;
+}
+
+.sous-menu > li:hover 
+{
+  background-color: rgba(33, 105, 236, 0.3);
+}
+
+.sous-menu > li:hover > a 
+{
+  color: white;
+}
+
+.menu-deroulant > a:after
+{
+  font-size: 15px;
+  margin-left: 7px;
+  display: inline-block;
+}
+
+.sous-menu 
+{
+  margin-top: 0%;
+  width: 100%;
+  text-align: left;
+  background-color: lightgrey;
+  border-radius: 2px;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.sous-menu > li > a 
+{
+  height: 50px;
+  padding-left: 20px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+@keyframes apparitionSousMenu 
+{
+  0% 
+  {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    border-top: 3px solid #040d21;
+  }
+  30% 
+  {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+  100% 
+  {
+    max-height: 50em;
+    border-top: 3px solid #040d21;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+}
+
+.menu-deroulant:hover > .sous-menu 
+{
+  animation: apparitionSousMenu 1s forwards;
+}
+
+  /* --------------------------------------- Section 1 : VPN --------------------------------- */
+
+  #vpn_div_presentation
+  {
+    width:60%;
+    height: auto;
+    margin-top: 8%;
+    margin-left: 20%;
+    display: flex;
+
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(15,18,34,1) 100%);
+
+    box-shadow: 5px 5px 12px lightgrey;
+  }
+
+  #picture_vpn_presentation
+  {
+    width: 80%;
+    height: auto;
+    
+  }
+
+  #picture_vpn_presentation_div
+  {
+    width:30%;
+    margin-left: 5%;
+    flex-grow: 1;
+    float:left;
+  }
+
+  #vpn_link
+  {
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+  }
+
+  #title_vpn
+  {
+    display: relative;
+    margin-top: 10%;
+    margin-right: 12%;
+    margin-left: 0%;
+    float:left;
+  }
+        
+  /* --------------------------------------- Section 2 : Database --------------------------------- */
+
+#database_div_presentation
+  {
+    width:60%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 20%;
+    display: flex;
+
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(15,18,34,1) 100%);
+
+    box-shadow: 5px 5px 12px lightgrey;
+  }
+
+  #picture_database_presentation
+  {
+    width: 65%;
+    height: auto;
+    
+  }
+
+  #picture_database_presentation_div
+  {
+    width:30%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    margin-left: 9%;
+    flex-grow: 1;
+    float:left;
+  
+  }
+
+  #database_link
+  {
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+  }
+
+  #title_database
+  {
+    display: relative;
+    margin-top: 11%;
+    margin-right: 37%;
+    margin-left: 0%;
+    float:left;
+  }
+        
+  /* --------------------------------------- Section 3 : Crypto --------------------------------- */
+
+#crypto_div_presentation
+  {
+    width:60%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 20%;
+    display: flex;
+
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(15,18,34,1) 100%);
+
+    box-shadow: 5px 5px 12px lightgrey;
+  }
+
+  #picture_crypto_presentation
+  {
+    width: 100%;
+    height: auto;
+    
+  }
+
+  #picture_crypto_presentation_div
+  {
+    width:30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 8%;
+    flex-grow: 1;
+    float:left;
+  
+  }
+
+  #crypto_link
+  {
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+  }
+
+  #title_crypto
+  {
+    display: relative;
+    margin-top: 8%;
+    margin-left: 4%;
+    float:left;
+    font-size: 100%;
+  }
+
+   /* --------------------------------------- Section 4 : Network --------------------------------- */
+
+#network_div_presentation
+{
+  width:60%;
+  height: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  display: flex;
+
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(15,18,34,1) 100%);
+
+  box-shadow: 5px 5px 12px lightgrey;
+}
+
+#picture_network_presentation
+{
+  width: 62%;
+  height: auto;
+  
+}
+
+#picture_network_presentation_div
+{
+  width:24%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  margin-left: 12%;
+  flex-grow: 1;
+  float:left;
+
+}
+
+#network_link
+{
+  text-decoration: none;
+  color: white;
+  font-size: 3em;
+}
+
+#title_network
+{
+  display: relative;
+  margin-top: 12%;
+  margin-right: 21%;
+  float:left;
+  font-size: 100%;
+}
+
+
+/* ----------------------------------------------------------lessons Page------------------------------------------------------*/
+
+header
+{
+  color: white ;
+}
+
+body
+{
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+/******************blue div*****************/
+
+.second_part
+{
+  margin-top: 10%;
+  background-color: #040d21;
+  display: flex;
+  border-radius: 25px;
+  padding-bottom: 2%;
+  width:98%;
+  margin-left: 1%;
+}
+
+.div_blue
+{
+  margin-top: 2%;
+  background-color: #070A1D;
+  border-radius: 25px;
+  padding-bottom: 2%;
+  padding-top: 3%;
+  width:98%;
+  margin-left: 1%;
+}
+
+.text_white
+{
+  color:white;
+  font-style: "Segoe UI",Helvetica,Arial,sans-serif;
+  margin-left: 13%;
+  line-height: 200%;
+  text-align: justify;
+  font-size: 120%;
+  width: 74%;
+}
+
+#div_vpn_types_img
+{
+  margin-top: 15%;
+  margin-left: 6%;
+  width: 32%;
+  height: auto;
+  float:left;
+}
+
+#types_vpn_img
+{
+  margin-top: 18%;
+  width: 90%;
+  height: auto;
+}
+
+#vpn_types_text
+{
+  display: relative;
+  float:left;
+  width:50%;
+  display: inline-block;
+}
+
+#vpn_types_part1
+{
+  color:white;
+  font-style: "Segoe UI",Helvetica,Arial,sans-serif;
+  margin-left: 5%;
+}
+
+#vpn_types_part2
+{
+  color:white;
+  margin-left: 5%;
+  font-size: 120%;
+}
+
+.list_white
+{
+  color:white;
+  font-style: "Fira Sans", sans-serif;
+  margin-left: 8%;
+  line-height: 175%;
+  text-align: justify;
+  font-size: 120%;
+  width: 80%;
+}
+
+
+.insider_titles
+{
+  color: #a2facf;
+  font-family: "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-feature-settings: "ss02" on,"ss01" on;
+  padding-bottom: 2%;
+  margin-left: 14%;
+  font-size: 180%;
+}
+
+.big_titles_white
+{
+  padding-bottom: 3%;
+  display: relative;
+  font-family: "Noto Sans", Cantarell, sans-serif;
+  font-size: 55px !important;;
+  color: white;
+  margin-left: 22%;    
+}
+
+.image_centered_blue
+{
+  margin-top: 3%;
+  margin-left: 26%;
+  margin-bottom: 3%;
+  height: auto;
+}
+
+
+/********************white div********************/
+
+.big_titles_black
+{
+  /*padding-bottom: 3%;*/
+  display: relative;
+  font-family: "Noto Sans", Cantarell, sans-serif;
+  font-size: 55px !important;;
+  color: white;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+
+.insider_titles_black
+{
+  color: white;
+  font-family: "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-feature-settings: "ss02" on,"ss01" on;
+  font-size: 180%;
+  margin-left: 20%;
+  margin-top: 6%;
+  margin-bottom: 3%;
+}
+
+.title_goals
+{
+  color: white;
+  font-family: "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-feature-settings: "ss02" on,"ss01" on;
+  font-size: 180%;
+  margin-top: 6%;
+  margin-bottom: 3%;
+}
+
+.text_black
+{
+  color:white;
+  font-style: "Fira Sans", sans-serif;
+  margin-left: 8%;
+  line-height: 200%;
+  text-align: justify;
+  font-size: 120%;
+}
+
+.div_white
+{
+  width: 70%;
+  margin-top: 4%;
+  margin-left: 11%;
+  border-radius: 25px;
+  padding-bottom: 2%;
+}
+
+.list_black
+{
+  color:white;
+  font-style: "Fira Sans", sans-serif;
+  margin-left: 12%;
+  line-height: 175%;
+  text-align: justify;
+  font-size: 120%;
+}
+
+.image_centered_white
+{
+  margin-top: 2%;
+  margin-left: 40%;
+  margin-bottom: 3%;
+  height: auto;
+}
+
+
+/*************************Not generics***************************/
+
+#vpn_first_part
+{
+  margin-left: 7%;
+  margin-top: 6%;
+  width: 80%;
+  height: auto;
+}
+
+
+#tunneling_image
+{
+  width: 50%;
+  height: auto;
+}
+
+#div_tunneling_image
+{
+  margin-top: 2%;
+  margin-left: 40%;
+  margin-bottom: 6%;
+  height: auto;
+}
+
+
+#vpn_second_part
+{
+  width: 100%;
+  padding-bottom: 14%;
+  /*display: inline-block;*/
+}
+
+#vpn_second_part_text
+{
+  position: relative;
+  width: 50%;
+  left:9%;
+  float: left;
+}
+
+.vpn_osi_model_img
+{
+  width: 100%;
+  height: auto;
+}
+
+#vpn_osi_model_div
+{
+  margin-left: 60%;
+  padding-top: 15%;
+}
+
+#network_scan_1
+{
+  width:70%;
+  height: auto;
+}
+
+#network_scan_1_div
+{
+  margin-top: 4%;
+  margin-left: 24%;
+  margin-bottom: 4%;
+}
+
+#network_scan_2
+{
+  width:60%;
+  height: auto;
+}
+
+#network_scan_3
+{
+  width:60%;
+  height: auto;
+}
+
+#network_mapping_1
+{
+  width:75%;
+  height: auto;
+}
+
+.network_mapping_1_div
+{
+  margin-top: 4%;
+  margin-left: 25%;
+  margin-bottom: 3%;
+  height: auto;
+}
+
+#network_mapping_2
+{
+  width:65%;
+  height: auto;
+}
+
+.network_mapping_2_div
+{
+  margin-top: 4%;
+  margin-left: 32%;
+  margin-bottom: 3%;
+  height: auto;
+}
+
+
+#network_mapping_3
+{
+  width:45%;
+  height: auto;
+}
+
+
+.network_mapping_3_div
+{
+  margin-top: 4%;
+  margin-left: 35%;
+  margin-bottom: 3%;
+  height: auto;
+}
+
+#network_mapping_4
+{
+  width:30%;
+  height: auto;
+}
+
+
+.network_mapping_4_div
+{
+  margin-top: 4%;
+  margin-left: 41%;
+  margin-bottom: 3%;
+  height: auto;
+}
+
+#networks_example_map
+{
+  width: 60%;
+  height: auto;
+}
+
+#networks_example_map_div
+{
+  margin-top: 4%;
+  margin-left: 35%;
+}
+
+
+
+#database_what_img
+{
+  width: 60%;
+  height: auto;
+}
+
+#database_what_img_div
+{
+  margin-left: 32%;
+  margin-top: 4%;
+  margin-bottom: 6%;
+}
+
+#sql_injection_1
+{
+  width: 55%;
+  height: auto;
+}
+
+#sql_injection_1_div
+{
+  margin-top: 4%;
+  margin-bottom: 6%;
+  margin-left: 30%;
+}
+
+
+#ddos_illustration_1
+{
+  width:55%;
+  height: auto;
+}
+
+#ddos_illustration_1_div
+{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 28%;
+}
+
+
+#database_our_database_1
+{
+  width:100%;
+  height: auto;
+}
+
+#database_our_database_1_div
+{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 12%;
+}
+
+#database_our_database_2
+{
+  width:100%;
+  height: auto;
+}
+
+#database_our_database_2_div
+{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 12%;
+}
+
+
+.sql_injection_request_examples
+{
+  font-style: "Fira Sans", sans-serif;
+  text-align: center;
+  font-style: italic;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+
+
+
+/********************Network lesson***********************/
+
+#div_white_network_part1
+{
+  width: 90%;
+  margin-left: 20%;
+  padding-bottom: 2%;
+  display: flex;
+  margin-bottom: 5%;
+}
+
+#network_parallel_text_div
+{
+  width: 60%;
+}
+
+
+#network_lesson_osi_model
+{
+  width:80%;
+  height: auto;
+  float: left;
+}
+
+#network_lesson_osi_model_div
+{
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  margin-top: 8%;
+}
+
+#all_topology_pictures
+{
+  display: flex;
+}
+
+#network_types_local_network_1
+{
+  width: 85%;
+  height: auto;
+}
+
+#network_types_local_network_2
+{
+  width: 85%;
+  height: auto;
+}
+
+#network_types_local_network_3
+{
+  width: 85%;
+  height: auto;
+}
+
+#network_types_local_network_div1
+{
+  margin-top: 8.5%;
+  margin-bottom: 7%;
+  margin-left: 9%;
+}
+
+#network_types_local_network_div2
+{
+  margin-top: 7.5%;
+  margin-bottom: 7%;
+  margin-left: 9%;
+}
+
+#network_types_local_network_div3
+{
+  margin-top: 7%;
+  margin-bottom: 7%;
+  margin-left: 9%;
+}
+
+
+#network_example_mac_adress
+{
+  width: 45%;
+  height: auto;
+}
+
+#network_example_mac_adress_div
+{
+  margin-left: 40%;
+}
+
+#network_example_packet
+{
+  width: 85%;
+  height: auto;
+}
+
+#network_example_packet_div
+{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 20%;
+}
+
+#network_example_packet_2
+{
+  width: 85%;
+  height: auto;
+}
+
+#network_example_packet_div_2
+{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 20%;
+}
+
+
+#network_example_layer3
+{
+  width: 55%;
+  height: auto;
+}
+
+#network_example_layer3_div
+{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 31%;
+}
+
+#network_example_ip_mask
+{
+  width: 45%;
+  height: auto;
+}
+
+#network_example_ip_mask_div
+{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 34%;
+}
+
+
+#network_router_example_packet
+{
+  width: 60%;
+  height: auto;
+}
+
+#network_router_example_packet_div
+{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 28%;
+}
+
+#network_example_table_routage
+{
+  width: 60%;
+  height: auto;
+}
+
+#network_example_table_routage_div
+{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 28%;
+}
+
+#network_example_router_linking
+{
+  width: 65%;
+  height: auto;
+}
+
+#network_example_router_linking_div
+{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 26%; 
+}
+
+#network_ports
+{
+  display: flex;
+}
+
+#network_table_reserved_ports
+{
+  /*width: 100%;*/
+  height: auto;
+}
+
+#network_table_reserved_ports_div
+{
+  margin-left: 4%;
+}
+
+
+
+/******link to exercises****/
+.go_to_exercises
+{
+    width: 180px;
+    white-space: nowrap;
+    padding: 1.29em 0.71em;
+    transition: box-shadow .4s,transform .2s,background .4s,color .4s;
+    border-radius: 0.43em;
+
+    margin-right: 0.75em;
+    color: blue!important;
+    background: 0 0;
+    box-shadow: inset 0 0 0 0.10em blue, 0 2px 8px #563719;
+    text-shadow: 0 2px 5px blue;
+}
+
+.go_to_exercises:hover
+{
+  appearance:none;
+  -webkit-appearance:n
+  padding:10px;
+  border:none;
+  background-color:#ADD8E6;
+  color:#fff;
+  font-weight:600;
+  border-radius:0.43em;
+  width:8%;
+}
+
+.go_to_exercises_div
+{
+  margin-left: 65%;
+  margin-top: 6%;
+  margin-bottom: 8%;
+}
+
+
+
+/********************************************Terminal****************************************/
+
+
+.loader,.loader:after 
+{
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+
+.loader 
+{            
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 
+{
+   0% {
+       -webkit-transform: rotate(0deg);
+       transform: rotate(0deg);
+   }
+   100% {
+       -webkit-transform: rotate(360deg);
+       transform: rotate(360deg);
+   }
+}
+
+@keyframes load8 
+{
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+        }
+}
+
+#loadingDiv 
+{
+  position:absolute;;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000;
+}
+
+#graph
+{
+  width:80%;
+  height: 120%;
+}
+
+#graph_included
+{
+  position:relative;
+  margin-left: 32%;
+/*  width:120%; 
+  height:120%; */
+  border: none; 
+  overflow: hidden;
+}
+
+.terminal
+{
+  background: black;
+  color: white;
+  font: courier;
+
+  margin-left: 23%;
+  padding: 10px;
+  padding-top: 4%;
+  padding-left: 8%;
+  padding-bottom: 8%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  
+  width:65%;
+  height: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  box-shadow: 3px 3px 15px lightgrey;
+}
+
+.line
+{
+  display: table;
+  width: 100%;
+}
+
+.terminal span
+{
+  display:table-cell; 
+  width:1px;
+}
+
+.terminal input
+{
+  display:table-cell; 
+  width:100%;
+  border: none;
+  background: black;
+  color: white;
+  outline: none;
+}
+
+section 
+{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    background-color: lightgrey;
+    font-family: monospace;
+}
+
+.static 
+{
+    width: auto;
+    padding-right: 20px;
+}
+
+.input 
+{
+    flex: 1;
+}
+
+
+/****************************To exo button**********************************/
+
+#bouton_exo
+      {
+        appearance:none;
+        -webkit-appearance:none;
+        text-decoration:none;
+        padding:10px;
+        border : none;
+        background-color: #040d21;        
+        font-weight:600;
+        text-align : center;
+        border-radius:10px;
+        width:fit-content;
+        color:white;
+        font-style: "Fira Sans", sans-serif;
+        line-height: 200%;
+        font-size: 120%;
+      }
+
+      #bouton_exo:hover
+      {
+        appearance:none;
+        -webkit-appearance:none;
+        text-decoration:none;
+        padding:10px;
+        border:none;
+        background-color: #103381;        
+        color:white;
+        font-weight:600;
+        text-align : center;
+        border-radius:10px;
+        width:fit-content;
+        font-style: "Fira Sans", sans-serif;
+        line-height: 200%;
+        font-size: 120%;
